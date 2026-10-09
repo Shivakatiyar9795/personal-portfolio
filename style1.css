@@ -1,0 +1,2356 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #ffffff;
+
+    color: #333333;
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   2. COMMON CONTAINER
+========================================================= */
+
+.container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   3. HEADER / NAVBAR
+========================================================= */
+
+.header {
+    width: 100%;
+
+    min-height: 70px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    color: #333333;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #287be8;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.nav-links li {
+    display: block;
+}
+
+.nav-links a {
+    color: #555555;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    transition: color 0.3s ease;
+
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #287be8;
+}
+
+.nav-links a.active {
+    color: #287be8;
+
+    font-weight: 500;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: -7px;
+
+    height: 2px;
+
+    background-color: #287be8;
+
+    border-radius: 2px;
+}
+
+
+/* =========================================================
+   4. COMMON PAGE HEADER
+   Used by Skills / Projects / Contact / About
+========================================================= */
+
+.page-header {
+    width: 100%;
+
+    background-color: #f8f9fb;
+
+    text-align: center;
+
+    padding: 65px 20px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.page-header h1 {
+    color: #596878;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #999999;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   5. COMMON SECTION TITLE
+========================================================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.small-title {
+    color: #287be8;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    color: #4f5d6b;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #999999;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   6. HOME / HERO SECTION
+========================================================= */
+
+.hero {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+
+    align-items: center;
+
+    background-color: #ffffff;
+
+    padding: 70px 0;
+}
+
+.hero-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-text {
+    flex: 1;
+
+    max-width: 600px;
+}
+
+.intro {
+    color: #666666;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    color: #596878;
+
+    font-size: 52px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+}
+
+.hero-text h2 {
+    color: #287be8;
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+.description {
+    max-width: 570px;
+
+    color: #777777;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   7. BUTTONS
+========================================================= */
+
+.buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 11px 21px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+}
+
+
+/* ---------- Primary Button ---------- */
+
+.primary-btn {
+    background-color: #287be8;
+
+    color: #ffffff;
+
+    border: 1px solid #287be8;
+}
+
+.primary-btn:hover {
+    background-color: #1768d2;
+
+    border-color: #1768d2;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Secondary Button ---------- */
+
+.secondary-btn {
+    background-color: transparent;
+
+    color: #287be8;
+
+    border: 1px solid #287be8;
+}
+
+.secondary-btn:hover {
+    background-color: #287be8;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   8. LARGE CIRCULAR PROFILE IMAGE
+========================================================= */
+
+.hero-image {
+    flex: 0 0 360px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ---------- Circle ---------- */
+
+.profile-circle {
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background-color: #4389ed;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 6px solid #e8f1ff;
+
+    box-shadow:
+        0 10px 30px rgba(40, 123, 232, 0.25);
+}
+
+
+/* ---------- Image ---------- */
+
+.profile-circle img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+}
+
+
+/* =========================================================
+   9. HOME - SERVICES / WHAT I DO
+========================================================= */
+
+.services {
+    padding: 70px 0 90px;
+
+    background-color: #ffffff;
+
+    border-top: 1px solid #f5f5f5;
+}
+
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.services-grid {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.service-card {
+    text-align: center;
+
+    padding: 30px;
+
+    border-right: 1px solid #eeeeee;
+
+    transition: all 0.3s ease;
+}
+
+.service-card:last-child {
+    border-right: none;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   SERVICE ICON
+========================================================= */
+
+.service-icon {
+    color: #287be8;
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   SERVICE TITLE
+========================================================= */
+
+.service-card h3 {
+    color: #555555;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   SERVICE DESCRIPTION
+========================================================= */
+
+.service-card p {
+    color: #999999;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    max-width: 250px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   10. ABOUT PAGE
+========================================================= */
+
+.about-section {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 70px 0;
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.about-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+    margin-bottom: 80px;
+}
+
+
+/* =========================================================
+   ABOUT IMAGE
+========================================================= */
+
+.about-image {
+    flex: 0 0 320px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.about-image .profile-circle {
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background-color: #4389ed;
+
+    border: 6px solid #e8f1ff;
+
+    box-shadow:
+        0 10px 30px rgba(40, 123, 232, 0.25);
+}
+
+.about-image .profile-circle img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =========================================================
+   ABOUT TEXT
+========================================================= */
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: #596878;
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+}
+
+.about-text h3 {
+    color: #596878;
+
+    font-size: 19px;
+
+    margin-top: 25px;
+
+    margin-bottom: 8px;
+}
+
+.about-text p {
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   ABOUT INFO
+========================================================= */
+
+.about-info {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px 25px;
+
+    margin-top: 25px;
+}
+
+.info-item {
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.info-item strong {
+    display: block;
+
+    color: #596878;
+
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+.info-item span {
+    color: #888888;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   11. JOURNEY / TIMELINE
+========================================================= */
+
+.journey {
+    padding-top: 10px;
+}
+
+.journey .section-title {
+    margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background-color: #dfe5eb;
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   TIMELINE ITEM
+========================================================= */
+
+.timeline-item {
+    width: 50%;
+
+    padding: 0 35px 40px;
+
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    text-align: right;
+
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+
+/* =========================================================
+   TIMELINE DOT
+========================================================= */
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    top: 5px;
+
+    width: 11px;
+
+    height: 11px;
+
+    background-color: #287be8;
+
+    border: 3px solid #eaf3ff;
+
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -6px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -6px;
+}
+
+
+/* =========================================================
+   TIMELINE CONTENT
+========================================================= */
+
+.timeline-content {
+    background-color: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 5px;
+
+    padding: 20px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.timeline-content .date {
+    color: #287be8;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    color: #596878;
+
+    font-size: 17px;
+
+    margin-bottom: 7px;
+}
+
+.timeline-content p {
+    color: #888888;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   12. SKILLS PAGE
+========================================================= */
+
+.skills-section {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 70px 0;
+}
+
+
+/* =========================================================
+   SKILLS CATEGORY
+========================================================= */
+
+.skill-category {
+    margin-bottom: 55px;
+}
+
+.category-heading {
+    color: #596878;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    position: relative;
+}
+
+
+/* Small blue line under category heading */
+
+.category-heading::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+
+    height: 2px;
+
+    background-color: #287be8;
+
+    margin: 8px auto 0;
+}
+
+
+/* =========================================================
+   SKILLS GRID
+========================================================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   SKILL CARD
+========================================================= */
+
+.skill-card {
+    background-color: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 5px;
+
+    padding: 22px 25px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #d7e7fa;
+
+    box-shadow:
+        0 8px 20px rgba(40, 123, 232, 0.09);
+}
+
+
+/* =========================================================
+   SKILL TOP
+========================================================= */
+
+.skill-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   SKILL NAME
+========================================================= */
+
+.skill-name {
+    color: #596878;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SKILL PERCENT
+========================================================= */
+
+.skill-percent {
+    color: #287be8;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.progress {
+    width: 100%;
+
+    height: 13px;
+
+    background-color: #edf0f3;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+
+    background-color: #4389ed;
+
+    border-radius: 20px;
+
+    transition: width 0.8s ease;
+}
+
+
+/* =========================================================
+   ADDITIONAL SKILLS
+========================================================= */
+
+.additional-skills {
+    margin-top: 60px;
+
+    padding: 50px 30px;
+
+    background-color: #fafbfc;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 5px;
+}
+
+.additional-skills .section-title {
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.tags {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 9px 16px;
+
+    background-color: #ffffff;
+
+    color: #687786;
+
+    border: 1px solid #e1e5e9;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+
+    transition: all 0.25s ease;
+}
+
+.tag:hover {
+    color: #287be8;
+
+    border-color: #287be8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LEARNING BOX
+========================================================= */
+
+.learning-box {
+    margin-top: 45px;
+
+    padding: 25px 30px;
+
+    background-color: #f8fbff;
+
+    border: 1px solid #dceaff;
+
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.learning-box h3 {
+    color: #596878;
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+.learning-box p {
+    color: #888888;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   13. PROJECTS PAGE
+========================================================= */
+
+.projects-section {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 70px 0;
+}
+
+
+/* =========================================================
+   PROJECT GRID
+========================================================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+.project-card {
+    background-color: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 5px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.04);
+
+    position: relative;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d5e5f8;
+
+    box-shadow:
+        0 10px 25px rgba(40, 123, 232, 0.10);
+}
+
+
+/* =========================================================
+   PROJECT NUMBER
+========================================================= */
+
+.project-number {
+    color: #287be8;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   PROJECT TITLE
+========================================================= */
+
+.project-card h3 {
+    color: #596878;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   PROJECT DESCRIPTION
+========================================================= */
+
+.project-card p {
+    color: #888888;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    margin-bottom: 20px;
+
+    min-height: 95px;
+}
+
+
+/* =========================================================
+   PROJECT TECHNOLOGIES
+========================================================= */
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+.project-tech span {
+    display: inline-block;
+
+    padding: 7px 11px;
+
+    background-color: #f7f8fa;
+
+    color: #687786;
+
+    border: 1px solid #e4e7eb;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PROJECT BUTTONS
+========================================================= */
+
+.project-buttons {
+    display: flex;
+
+    gap: 10px;
+}
+
+.project-btn {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 10px 14px;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+
+/* ---------- GitHub Button ---------- */
+
+.github-btn {
+    background-color: #596878;
+
+    color: #ffffff;
+}
+
+.github-btn:hover {
+    background-color: #3f4d5b;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- View Project Button ---------- */
+
+.view-btn {
+    background-color: #287be8;
+
+    color: #ffffff;
+}
+
+.view-btn:hover {
+    background-color: #1769d0;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PROJECT MESSAGE
+========================================================= */
+
+.projects-message {
+    margin-top: 50px;
+
+    padding: 25px 30px;
+
+    background-color: #fafbfc;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.projects-message h3 {
+    color: #596878;
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+.projects-message p {
+    color: #888888;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   14. CONTACT PAGE
+========================================================= */
+
+.contact-section {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 70px 0;
+}
+
+
+/* =========================================================
+   CONTACT GRID
+========================================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr;
+
+    gap: 50px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+========================================================= */
+
+.contact-info {
+    padding: 10px 0;
+}
+
+.contact-info h2 {
+    color: #596878;
+
+    font-size: 26px;
+
+    margin-bottom: 12px;
+}
+
+.contact-info > p {
+    color: #888888;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   CONTACT ITEM
+========================================================= */
+
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-icon {
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #f0f6ff;
+
+    color: #287be8;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+.contact-item h3 {
+    color: #596878;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+.contact-item p,
+.contact-item a {
+    color: #888888;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.contact-item a:hover {
+    color: #287be8;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form {
+    background-color: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 5px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.contact-form h2 {
+    color: #596878;
+
+    font-size: 24px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #596878;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #dddddd;
+
+    background-color: #ffffff;
+
+    color: #555555;
+
+    border-radius: 4px;
+
+    padding: 11px 13px;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #287be8;
+
+    box-shadow:
+        0 0 0 3px rgba(40, 123, 232, 0.08);
+}
+
+.form-group textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   FORM BUTTON
+========================================================= */
+
+.contact-form .btn {
+    border: none;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   15. FOOTER
+========================================================= */
+
+.footer {
+    width: 100%;
+
+    background-color: #4f535a;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 12px;
+
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   16. TABLET RESPONSIVE - 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* Hero */
+
+    .hero-content {
+        gap: 45px;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+
+    /* About */
+
+    .about-content {
+        gap: 40px;
+    }
+
+
+    /* Skills */
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Projects */
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Contact */
+
+    .contact-grid {
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   17. TABLET RESPONSIVE - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .header {
+        height: auto;
+
+        min-height: 70px;
+    }
+
+    .navbar {
+        height: auto;
+
+        padding: 18px 0;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       PAGE HEADER
+    ===================================================== */
+
+    .page-header {
+        padding: 55px 20px;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+
+    /* =====================================================
+       HOME / HERO
+    ===================================================== */
+
+    .hero {
+        min-height: auto;
+
+        padding: 80px 0;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        gap: 45px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .description {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+
+    /* =====================================================
+       PROFILE
+    ===================================================== */
+
+    .hero-image {
+        flex: auto;
+    }
+
+    .profile-circle {
+        width: 280px;
+
+        height: 280px;
+    }
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+    }
+
+    .service-card {
+        border-right: none;
+
+        border-bottom: 1px solid #eeeeee;
+
+        padding: 30px 20px;
+    }
+
+    .service-card:last-child {
+        border-bottom: none;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about-section {
+        padding: 55px 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .about-image {
+        flex: auto;
+    }
+
+    .about-image .profile-circle {
+        width: 280px;
+
+        height: 280px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-info {
+        text-align: left;
+    }
+
+
+    /* =====================================================
+       TIMELINE
+    ===================================================== */
+
+    .timeline::before {
+        left: 8px;
+
+        transform: none;
+    }
+
+    .timeline-item {
+        width: 100%;
+
+        left: 0 !important;
+
+        text-align: left !important;
+
+        padding:
+            0
+            0
+            30px
+            35px;
+    }
+
+    .timeline-item::before {
+        left: 3px !important;
+
+        right: auto !important;
+    }
+
+
+    /* =====================================================
+       SKILLS
+    ===================================================== */
+
+    .skills-section {
+        width: 92%;
+
+        padding: 55px 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
+
+    .projects-section {
+        width: 92%;
+
+        padding: 55px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+        margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact-section {
+        width: 92%;
+
+        padding: 55px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   18. MOBILE RESPONSIVE - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
+    .logo {
+        font-size: 22px;
+    }
+
+
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       PAGE HEADER
+    ===================================================== */
+
+    .page-header {
+        padding: 45px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+
+    .page-header p {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .intro {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       PROFILE
+    ===================================================== */
+
+    .profile-circle {
+        width: 220px;
+
+        height: 220px;
+
+        border-width: 5px;
+    }
+
+    .hero-image {
+        flex: auto;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .btn {
+        width: 190px;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       SECTION TITLE
+    ===================================================== */
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 23px;
+    }
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    .services {
+        padding: 55px 0 70px;
+    }
+
+    .service-card {
+        padding: 25px 15px;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about-section {
+        padding: 45px 0;
+    }
+
+    .about-image .profile-circle {
+        width: 220px;
+
+        height: 220px;
+
+        border-width: 5px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+
+        text-align: left;
+    }
+
+
+    /* =====================================================
+       TIMELINE
+    ===================================================== */
+
+    .timeline-content {
+        padding: 17px;
+    }
+
+    .timeline-content h3 {
+        font-size: 16px;
+    }
+
+
+    /* =====================================================
+       SKILLS
+    ===================================================== */
+
+    .skills-section {
+        width: 92%;
+
+        padding: 45px 0;
+    }
+
+    .skill-card {
+        padding: 20px;
+    }
+
+    .skill-name {
+        font-size: 14px;
+    }
+
+    .skill-percent {
+        font-size: 12px;
+    }
+
+    .progress {
+        height: 12px;
+    }
+
+
+    /* =====================================================
+       ADDITIONAL SKILLS
+    ===================================================== */
+
+    .additional-skills {
+        padding: 35px 18px;
+    }
+
+    .tags {
+        gap: 8px;
+    }
+
+    .tag {
+        font-size: 12px;
+
+        padding: 8px 12px;
+    }
+
+
+    /* =====================================================
+       LEARNING BOX
+    ===================================================== */
+
+    .learning-box {
+        padding: 22px 18px;
+    }
+
+
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
+
+    .projects-section {
+        width: 92%;
+
+        padding: 45px 0;
+    }
+
+    .project-card {
+        padding: 22px;
+    }
+
+    .project-card h3 {
+        font-size: 19px;
+    }
+
+    .project-card p {
+        min-height: auto;
+
+        font-size: 13px;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+    }
+
+    .project-btn {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact-section {
+        width: 92%;
+
+        padding: 45px 0;
+    }
+
+    .contact-info h2 {
+        font-size: 23px;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+        font-size: 11px;
+
+        padding: 18px 10px;
+    }
+
+}
+
+
+/* =========================================================
+   19. EXTRA SMALL DEVICES - 350px
+========================================================= */
+
+@media (max-width: 350px) {
+
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text h2 {
+        font-size: 18px;
+    }
+
+
+    /* =====================================================
+       PROFILE
+    ===================================================== */
+
+    .profile-circle {
+        width: 190px;
+
+        height: 190px;
+    }
+
+    .about-image .profile-circle {
+        width: 190px;
+
+        height: 190px;
+    }
+
+
+    /* =====================================================
+       PAGE HEADER
+    ===================================================== */
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+
+    /* =====================================================
+       SKILLS
+    ===================================================== */
+
+    .skill-top {
+        gap: 8px;
+    }
+
+    .skill-name {
+        font-size: 13px;
+    }
+
+    .skill-percent {
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
+
+    .project-card {
+        padding: 18px;
+    }
+
+    .project-card h3 {
+        font-size: 18px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+        font-size: 10px;
+    }
+
+}
+/* ================================
+   PAGE NAVIGATION BUTTONS
+================================ */
+
+.page-navigation {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 11px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Main Page */
+.main-btn {
+    background: #287be8;
+    color: white;
+}
+
+.main-btn:hover {
+    background: #1768d2;
+    transform: translateY(-2px);
+}
+
+/* Previous */
+.prev-btn {
+    background: white;
+    color: #287be8;
+    border: 1px solid #287be8;
+}
+
+.prev-btn:hover {
+    background: #287be8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Next */
+.next-btn {
+    background: #287be8;
+    color: white;
+}
+
+.next-btn:hover {
+    background: #1768d2;
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .page-navigation {
+        gap: 10px;
+        margin: 30px auto;
+    }
+
+    .nav-btn {
+        padding: 9px 16px;
+        font-size: 12px;
+    }
+}
